@@ -1,9 +1,9 @@
-.header{
+.header {
     background-color: $color-grey-dark-1;
-    grid-column: full-start / col-start 7;
+    grid-column: full-start / col-end 6;
     background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
     background-size: cover;
-    background-position:  center;
+    background-position: center;
     padding: 8rem;
     padding-top: 4rem;
 
@@ -13,14 +13,22 @@
     grid-row-gap: 1.5rem;
     justify-content: center;
 
-    &__logo{
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+    }
+
+    &__logo {
         height: 3rem;
         justify-self: center;
     }
 
-    &__btn{
+    &__btn {
         align-self: start;
-        justify-self: start; 
+        justify-self: start;
     }
 
     &__seenon-text {
@@ -47,12 +55,11 @@
         grid-column-gap: 3rem;
         justify-items: center;
         align-items: center;
-        
 
         img {
             max-height: 2.5rem;
             max-width: 100%;
-            filter: brightness(70%)
+            filter: brightness(70%);
         }
     }
 }
